@@ -23,7 +23,7 @@ def summarize(text):
     similar_sort=sorted(similarity_list_sums)
     new_sentences=[]
     for j in range(len(similarity_list_sums)): 
-        if similarity_list_sums[j] in similar_sort[0:3]: 
+        if similarity_list_sums[j] in similar_sort[-3:]: 
             if sentences[j] not in new_sentences:
                 new_sentences.append(sentences[j])
     summary=" ".join(new_sentences)
