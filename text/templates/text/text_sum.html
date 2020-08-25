@@ -1,0 +1,21 @@
+{% load static %}
+<html> 
+    <head> 
+        <meta charset = "UTF-8" />
+        <link rel="stylesheet" type="text/css" href ="{% static 'css/text_sum.css' %}">
+        <title> Text summarizer</title>
+    </head>
+    <body> 
+        <H2> TEXT SUMMARIZER </H2>
+        <form method=POST> 
+            {% csrf_token %}
+            <label> Enter your text here: </label>
+            <div> 
+                <textarea id="myText" cols="100" rows="20" name="text_unsum"></textarea>
+            </div> 
+            <div> 
+            <button id="btn"> Submit </button>
+            </div>
+        </form>
+    </body>
+</html>

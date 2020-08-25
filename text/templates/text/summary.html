@@ -1,0 +1,12 @@
+{% load static %}
+<html>
+<head>
+    <meta charset = "UTF-8" />
+    <link rel="stylesheet" type="text/css" href ="{% static 'css/summary.css' %}">
+    <title> Text summarizer </title>
+</head> 
+<body> 
+    <h1> Summary </h1>
+<div> {{ summary }} </div>
+<div> <a href="{% url 'text_sum' %}"> Go back to homepage? </a></div>
+</body>
